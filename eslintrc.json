@@ -1,0 +1,32 @@
+{
+    "root": true,
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true
+    },
+
+    "rules": {
+
+        "semi": [2, "always"],
+        "quotes": [2, "single", { "avoidEscape": true }],
+
+        "no-restricted-syntax": [
+
+            "error",
+
+            {
+                "selector": "CallExpression[callee.name='require']",
+                "message": "Please use es6 modules, import and export."
+            },
+
+            {
+                "selector": "MemberExpression[object.name='module']",
+                "message": "Please use es6 modules, import and export."
+            }
+        ]
+
+    }
+}
